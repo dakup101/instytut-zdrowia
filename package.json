@@ -1,0 +1,27 @@
+{
+  "name": "instytut-zdrowia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "WP Theme for Instytut Zdrowia",
+  "main": "/assets/js/theme.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack-dev-server --hot",
+    "scss": "sass ./assets/sass/theme.scss ./assets/sass/theme.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "terser-webpack-plugin": "^5.3.1",
+    "ts-loader": "^9.2.8",
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
+    "typescript": "^4.6.3",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1"
+  },
+  "dependencies": {
+    "sass": "^1.50.1"
+  }
+}

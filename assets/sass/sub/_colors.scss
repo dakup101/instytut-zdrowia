@@ -1,0 +1,9 @@
+$color-accent: #dbb359;
+$color-dark: #1d1d1b;
+$color-light: #f8f9fa;
+$color-brownish: #c4a57a;
+$filter-img-white-to-accent: invert(64%) sepia(51%) saturate(412%) hue-rotate(4deg) brightness(103%) contrast(91%);
+$filter-img-white-to-dark: invert(81%) sepia(1%) saturate(167%) hue-rotate(50deg) brightness(92%) contrast(94%);
+
+$transition: all .2s ease-in-out;
+$letter-spacing: 2px;
