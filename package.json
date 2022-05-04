@@ -5,7 +5,7 @@
   "description": "WP Theme for Instytut Zdrowia",
   "main": "/assets/js/theme.js",
   "scripts": {
-    "dev" : "npm-run-all --parallel scss webpack",
+    "dev": "npm-run-all --parallel scss webpack",
     "webpack": "webpack",
     "scss": "sass ./assets/sass/theme.scss ./assets/sass/theme.css -w"
   },

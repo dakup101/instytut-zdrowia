@@ -2,7 +2,6 @@ const path = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
 
-
 module.exports = {
     entry: './assets/js/theme',
     mode: "development",
@@ -26,7 +25,7 @@ module.exports = {
             new TsconfigPathsPlugin({
                 configFile: './assets/js/tsconfig.json',
                 // baseUrl: path.resolve(__dirname, './assets/js'),
-            })
+            }),
         ]
     },
     optimization: {

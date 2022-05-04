@@ -24,6 +24,7 @@
   }
 }
 .main-nav{
+  position: relative;
   &__wrapper{
     gap: 10rem;
 
@@ -48,6 +49,29 @@
       bottom: 0;
       background: $color-accent;
       transition: $transition
+    }
+    &--text{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      & svg{
+        height: 1em;
+        fill: currentColor;
+        transform: rotate(90deg);
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    .show &--text{
+      & svg{
+        transform: rotate(270deg);
+      }
+    }
+    &.show{
+      color: $color-accent;
+      &:before{
+        left: 0;
+      }
     }
     &:hover{
       color: $color-accent;
