@@ -498,8 +498,8 @@ main {
   content: "";
   position: absolute;
   width: 2px;
-  height: 120%;
-  top: -145%;
+  height: 80%;
+  top: -100%;
   background: #dbb359;
   opacity: 0.3;
   left: 50%;
@@ -507,7 +507,7 @@ main {
 }
 .half-column .link-to-right .number {
   position: absolute;
-  top: -200%;
+  top: -140%;
   writing-mode: lr;
   font-size: 5rem;
   right: -2rem;
