@@ -26,4 +26,6 @@ export default function manageSiteOverlay(){
     siteOverlay.addEventListener('mouseout', e => {
         info.style.opacity="0";
     })
+
+
 }
