@@ -4,9 +4,9 @@ function taxonomy_med_title() {
     register_taxonomy('med_title', 'doctors', array(
         // Hierarchical taxonomy (like categories)
         'hierarchical' => false,
-        'show_ui'                    => true,
-        'show_in_quick_edit'         => false,
-        'meta_box_cb'                => false,
+        // 'show_ui'                    => true,
+        // 'show_in_quick_edit'         => false,
+        // 'meta_box_cb'                => false,
         // This array of options controls the labels displayed in the WordPress Admin UI
         'labels' => array(
         'name' => _x( 'Tytuły naukowe', 'taxonomy general name' ),
