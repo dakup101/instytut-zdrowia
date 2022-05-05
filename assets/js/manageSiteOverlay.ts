@@ -1,7 +1,7 @@
 export default function manageSiteOverlay(){
     const siteOverlay = document.querySelector('.site-overlay');
     let info = document.getElementById('overlayInfo');
-    let left, top; 
+    let left : number, top : number; 
 
 
     siteOverlay.addEventListener('click', e => {
@@ -23,7 +23,7 @@ export default function manageSiteOverlay(){
         console.log(top)
     })
 
-    siteOverlay.addEventListener('mouseout', e => {
+    siteOverlay.addEventListener('mouseout', () => {
         info.style.opacity="0";
     })
 
