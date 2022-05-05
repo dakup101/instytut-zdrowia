@@ -1,5 +1,5 @@
 <?php
-function custom_post_type() {
+function post_type_doctors() {
  
     // Set UI labels for Custom Post Type
         $labels = array(
@@ -51,4 +51,4 @@ function custom_post_type() {
     * unnecessarily executed. 
     */
      
-    add_action( 'init', 'custom_post_type', 0 );
+    add_action( 'init', 'post_type_doctors', 0 );

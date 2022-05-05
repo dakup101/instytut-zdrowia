@@ -1,5 +1,5 @@
 <?php
-function add_custom_taxonomies_department() {
+function taxonomy_department() {
     // Add new "Locations" taxonomy to Posts
     register_taxonomy('department', 'doctors', array(
         // Hierarchical taxonomy (like categories)
@@ -27,4 +27,4 @@ function add_custom_taxonomies_department() {
         ),
     ));
 }
-add_action( 'init', 'add_custom_taxonomies_department', 0 );
+add_action( 'init', 'taxonomy_department', 0 );

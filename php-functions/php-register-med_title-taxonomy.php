@@ -1,5 +1,5 @@
 <?php
-function add_custom_taxonomies() {
+function taxonomy_med_title() {
     // Add new "Locations" taxonomy to Posts
     register_taxonomy('med_title', 'doctors', array(
         // Hierarchical taxonomy (like categories)
@@ -27,4 +27,4 @@ function add_custom_taxonomies() {
         ),
     ));
 }
-add_action( 'init', 'add_custom_taxonomies', 0 );
+add_action( 'init', 'taxonomy_med_title', 0 );
