@@ -11,6 +11,7 @@
 @import "sub/prices";
 @import "sub/breadcrumb";
 @import "sub/mega-menu";
+@import "sub/specialists";
 
 $letter-spacing: 3px;
 
@@ -355,3 +356,13 @@ main{
   }
 }
 
+.spinner{
+  width: 35px;
+  height: 35px;
+  animation: rotate 1.5s linear infinite; 
+  fill: $color-accent;
+}
+
+@keyframes rotate{
+  to{ transform: rotate(360deg); }
+}

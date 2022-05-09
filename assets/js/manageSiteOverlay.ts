@@ -19,8 +19,6 @@ export default function manageSiteOverlay(){
         info.style.opacity = "1";
         info.style.left = left + 'px';
         info.style.top = top + 'px';
-        console.log(left);
-        console.log(top)
     })
 
     siteOverlay.addEventListener('mouseout', () => {
