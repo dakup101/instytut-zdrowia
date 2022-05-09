@@ -21,10 +21,26 @@
         pointer-events: none;
         z-index: 500;
         box-shadow: 10px 0 25px rgba(0, 0, 0, .1);
+        transition: all 0.2s ease-in-out;
         &.show{
             opacity: 1;
             pointer-events: all;
             transition: all 0.2s ease-in-out;
+        }
+        &--close{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            transition: all 0.2s ease-in-out;
+            & svg{
+                fill: currentColor;
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+            &:hover{
+                color: $color-accent;
+                cursor: pointer;
+            }
         }
         &--wrapper{
             height: 100%;

@@ -25,5 +25,8 @@ export default function manageSiteOverlay(){
         info.style.opacity="0";
     })
 
+    document.querySelector('.specialists__popup--close').addEventListener('click', e => {
+        (siteOverlay as HTMLElement).click();
+    })
 
 }
