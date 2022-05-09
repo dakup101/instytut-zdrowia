@@ -490,7 +490,8 @@
 }
 .specialists__popup--name {
   font-weight: 700;
-  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
 }
 .specialists__popup--desc {
   margin-bottom: 2.5rem;

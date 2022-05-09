@@ -3,21 +3,20 @@ export default function specialistsAjax(doctor_id){
     console.log('-- Start Ajax --')
     document.getElementById('specialistsSpinner').classList.add('show');
     document.querySelector('.site-overlay').classList.add('show');
-    
+
     setTimeout(()=>{
         document.querySelector('.specialists__popup').classList.toggle('show');
     },200)
 
 
     let ajaxUrl = 'http://localhost/iz/wp-admin/admin-ajax.php'
-    let data = {
-        action : 'specialistsajax',
-        doctor : doctor_id,
-    }
+    const data = new FormData();
+    data.append('action', 'specialistsajax');
+    data.append('doctor', doctor_id);
     fetch(ajaxUrl, {
         method: "POST",
-        body: JSON.stringify(data),
-        headers: {"content-type": "application/json"}
+        body: data,
+        credentials: 'same-origin',
     })
     .then(response => response.json()) 
     .then(json => {
