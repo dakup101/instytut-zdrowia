@@ -23,7 +23,7 @@ function menu_item_has_children($menu_items, $check_id){
 <nav class="main-nav__nav d-flex justify-content-end align-items-center">
     <?php foreach ($menu_items as $item) : ?>
         <?php if ($item->menu_item_parent == 0) : ?>
-            <a href="#" class="main-nav__link <?php if (menu_item_has_children($menu_items, $item->db_id)) {echo 'has-children';} ?>" data-parent="<?php echo $item->db_id; ?>">
+            <a href="<?php echo $item->url; ?>" class="main-nav__link <?php if (menu_item_has_children($menu_items, $item->db_id)) {echo 'has-children';} ?>" data-parent="<?php echo $item->db_id; ?>">
                 <span class="main-nav__link--text"><?php echo $item->title; ?><?php if (menu_item_has_children($menu_items, $item->db_id)) {echo '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>';} ?></span>
             </a>
             <?php if (isset($menu_items[($counter+1)]) && $menu_items[($counter+1)]->menu_item_parent == $item->db_id) : ?>
