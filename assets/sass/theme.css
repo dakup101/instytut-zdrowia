@@ -595,6 +595,88 @@
   background: #1d1d1b;
 }
 
+.contact-people__item {
+  display: flex;
+  gap: 2.5rem;
+}
+.contact-people__item--phone {
+  color: #1d1d1b;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.contact-people__item--phone:hover {
+  color: #dbb359;
+}
+.contact-people__item--mail {
+  color: #1d1d1b;
+  transition: all 0.2s ease-in-out;
+}
+.contact-people__item--mail:hover {
+  color: #dbb359;
+}
+
+.contact-map__map {
+  position: relative;
+}
+.contact-map__map, .contact-map__map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.contact-map .text {
+  font-size: 1.3rem;
+}
+
+.cf-7-form__input-wrapper label, .cf-7-form__input-wrapper input, .cf-7-form__input-wrapper textarea {
+  width: 100%;
+  color: #1d1d1b;
+}
+.cf-7-form__input-wrapper label {
+  margin-bottom: 1rem;
+}
+.cf-7-form__input-wrapper input, .cf-7-form__input-wrapper textarea {
+  padding: 0.7rem 1rem;
+  border-color: #d5d5d5;
+  border: 2px solid #d5d5d5;
+  background: rgba(255, 255, 255, 0.5);
+}
+.cf-7-form__input-wrapper input::placeholder, .cf-7-form__input-wrapper textarea::placeholder {
+  color: #d5d5d5;
+}
+.cf-7-form input[type=submit] {
+  background: #c4a57a;
+  color: #1d1d1b;
+  text-transform: uppercase;
+  padding: 1rem 3rem;
+  float: right;
+  border: none;
+  font-weight: bold;
+  font-size: 0.8rem;
+  transition: all 0.2s ease-in-out;
+}
+.cf-7-form input[type=submit]:hover {
+  background: #1d1d1b;
+  color: #fff;
+  cursor: pointer;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.sent .wpcf7-response-output {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  background: #c4a57a;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 1rem;
+  text-align: center;
+  z-index: 100;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
 main {
   margin-top: 35px;
 }
@@ -928,6 +1010,19 @@ main {
   text-align: center;
   width: 100px;
   font-size: 0.8em;
+}
+
+.img-with-logo {
+  position: relative;
+}
+.img-with-logo__down {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: calc(100% - 10px);
+  left: 0;
+  z-index: 10;
+  transform: rotate(180deg);
 }
 
 .spinner {

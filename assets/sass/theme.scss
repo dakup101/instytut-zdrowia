@@ -12,6 +12,7 @@
 @import "sub/breadcrumb";
 @import "sub/mega-menu";
 @import "sub/specialists";
+@import "sub/contact";
 
 $letter-spacing: 3px;
 
@@ -355,7 +356,18 @@ main{
     }
   }
 }
-
+.img-with-logo{
+  position: relative;
+  &__down{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: calc(100% - 10px);
+    left: 0;
+    z-index: 10;
+    transform: rotate(180deg);
+  }
+}
 .spinner{
   width: 35px;
   height: 35px;
