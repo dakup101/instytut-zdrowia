@@ -13,7 +13,7 @@
         max-width: 1100px;
         width: 100%;
         max-height: 70vh;
-        top: 50%;
+        top: calc(50% + 2rem);
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
         background: #fff;
@@ -23,6 +23,7 @@
         box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
         transition: all 0.2s ease-in-out;
         &.show{
+            top: 50%;
             opacity: 1;
             pointer-events: all;
             transition: all 0.2s ease-in-out;
