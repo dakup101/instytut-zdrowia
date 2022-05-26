@@ -37,29 +37,7 @@
             <div class="main-nav__logo" id="logo">
                 <img src="<?php echo get_template_directory_uri().'/assets/images/logo-header.png'; ?>" alt="Instytut Zdrowia">
             </div>
-            <nav class="main-nav__nav d-flex justify-content-end align-items-center">
-                <a class="main-nav__link" href="#">
-                    <span>O nas</span>
-                </a>
-                <a class="main-nav__link" href="#">
-                    <span>Oferta</span>
-                </a>
-                <a class="main-nav__link" href="#">
-                    <span>Badania kliniczne</span>
-                </a>
-                <a class="main-nav__link" href="#">
-                    <span>Cennik</span>
-                </a>
-                <a class="main-nav__link" href="#">
-                    <span>Kontant</span>
-                </a>
-                <a href="#" class="iz-btn iz-btn__main ms-2">
-                    <img class="iz-btn__icon" src="<?php echo get_template_directory_uri().'/assets/images/svg/calendar-white.svg';?>" alt="">
-                    <span class="iz-btn__text">
-                        Zarezerwuj termin
-                    </span>
-                </a>
-            </nav>
+            <?php get_template_part('template-parts/header-nav'); ?>
         </div>
     </div>
 </header>

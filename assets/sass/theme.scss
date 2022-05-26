@@ -10,6 +10,9 @@
 @import "sub/header";
 @import "sub/prices";
 @import "sub/breadcrumb";
+@import "sub/mega-menu";
+@import "sub/specialists";
+@import "sub/contact";
 
 $letter-spacing: 3px;
 
@@ -81,7 +84,7 @@ main{
         position: absolute;
         width: 2px;
         height: 120%;
-        top: -145%;
+        top: -140%;
         background: $color-accent;
         opacity: 0.3;
         left: 50%;
@@ -90,7 +93,7 @@ main{
     }
     & .number{
       position: absolute;
-      top: -200%;
+      top: -185%;
       writing-mode: lr;
       font-size: 5rem;
       right: -2rem;
@@ -235,6 +238,7 @@ main{
 
 
 .footer{
+  border-top: 1px solid #d5d5d5;
   &__info{
     &-logo{
       width: 200px;
@@ -301,4 +305,77 @@ main{
       }
     }
   }
+}
+
+.site-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 499;
+  background: rgba(0,0,0,0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s ease-in-out;
+  cursor: none !important;
+  &.show{
+    opacity: 1;
+    pointer-events: all;
+  }
+  &__info{
+    position:absolute;
+    transform:translate(-50%, -50%);
+    height:30px;
+    width:30px;
+    border-radius:50%;
+    border:2px solid white;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+    &--icon{
+      width: 25px;
+    }
+    &--text{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: white;
+      &::after{
+        content: 'Zamknij';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(-10px - 1em);
+        color: white;
+        width: fit-content;
+        text-align: center;
+        width: 100px;
+        font-size: .8em;
+      }
+    }
+  }
+}
+.img-with-logo{
+  position: relative;
+  &__down{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: calc(100% - 10px);
+    left: 0;
+    z-index: 10;
+    transform: rotate(180deg);
+  }
+}
+.spinner{
+  width: 35px;
+  height: 35px;
+  animation: rotate 1.5s linear infinite; 
+  fill: $color-accent;
+}
+
+@keyframes rotate{
+  to{ transform: rotate(360deg); }
 }

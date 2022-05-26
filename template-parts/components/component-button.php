@@ -14,7 +14,7 @@ $alt = $args['alt'];
 $brown = $args['brown'];
 $arrow = $args['arrow'];
 $is_icon = $args['is_icon'];
-if ($is_icon) $icon = $args['icon'];
+if ($is_icon) {$icon = $args['icon'];}
 ?>
 
 <a href="<?php echo $link; ?>" class="iz-btn <?php echo $alt ? 'iz-btn__alt' : 'iz-btn__main' ?> <?php echo $brown ? 'iz-btn__brown' : '' ?>">

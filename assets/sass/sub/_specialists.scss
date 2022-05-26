@@ -1,0 +1,173 @@
+.specisalists-text{
+    & .title-subtitle{
+        margin-bottom: 2rem;
+    }
+    & .text{
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+}
+.specialists{
+    &__popup{
+        position: fixed;
+        max-width: 1100px;
+        width: 100%;
+        max-height: 70vh;
+        top: calc(50% + 2rem);
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        background: #fff;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 500;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
+        transition: all 0.2s ease-in-out;
+        &.show{
+            top: 50%;
+            opacity: 1;
+            pointer-events: all;
+            transition: all 0.2s ease-in-out;
+        }
+        &--close{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            transition: all 0.2s ease-in-out;
+            & svg{
+                fill: currentColor;
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+            &:hover{
+                color: $color-accent;
+                cursor: pointer;
+            }
+        }
+        &--wrapper{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            padding: 3rem;
+        }
+        &--img{
+            width: 100%;
+            position: relative;
+            & img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        &--overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            z-index: 1;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.2s ease-in-out;
+            &.show{
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+        &--name{
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: .5rem;
+        }
+        &--desc{
+            margin-bottom: 2.5rem;
+            max-height: 350px;
+            overflow-y: auto;
+        }
+    }
+    &__doctor{
+        font-weight: 600;
+        &--wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: .2rem;
+        }
+        &--name{
+            font-weight: 700;
+        }
+        &--specs{
+            font-weight: 600;
+            color: #9E9E9E;
+        }
+    }
+    &__item{
+        border: none;
+        margin-bottom: 0rem !important;
+        &--row{
+            padding: 0;
+            border: none;
+        }
+        &--row{
+            margin-bottom: 1.5rem;
+        }
+    }
+    &__btn{
+        margin-bottom: 0rem;
+        padding: 1.5rem 0;
+        border-top: 1px solid rgba(219, 179, 89, .3);
+
+        .active &{
+            margin-bottom: 1.5rem;
+            padding-bottom: 0;
+        }
+    }
+    &__links{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    &__link{
+        font-weight: 300;
+        padding: .5rem;
+        position: relative;
+        overflow: hidden;
+        transition: all .2s ease-in-out;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            transition: all .2s ease-in-out;
+            z-index: -1;
+        }
+        &:hover{
+            &::before{
+                left: 0;
+            }
+        }
+        &--more{
+            color: $color-accent;
+            &:hover{
+                text-decoration: none;
+                color: $color-dark;
+            }
+            &::before{
+                background: $color-accent;
+            }
+        }
+        &--visit{
+            color: $color-dark;
+            &:hover{
+                text-decoration: none;
+                color: #fff;
+            }
+            &::before{
+                background: $color-dark;
+            }
+        }
+    }
+}

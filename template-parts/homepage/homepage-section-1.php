@@ -10,7 +10,7 @@ $s1_btn_settings = $s1['btn_settings'];
 $s1_btn_iconed = $s1_btn_settings['icon'];
 $s1_btn_alt = $s1_btn_settings['alt'];
 $s1_btn_arrow = $s1_btn_settings['arrow'];
-if ($s1_btn_iconed) $s1_btn_icon = $s1['ikonka_przycisku'];
+if ($s1_btn_iconed) { $s1_btn_icon = $s1['ikonka_przycisku']; }
 ?>
 
 <section class="container-fluid mb-5" id="hero">
@@ -52,7 +52,7 @@ if ($s1_btn_iconed) $s1_btn_icon = $s1['ikonka_przycisku'];
                             'arrow' => $s1_btn_arrow,
                             'is_icon' => $s1_btn_iconed
                         );
-                        if ($s1_btn_iconed) $args['icon'] = $s1_btn_icon;
+                        if ($s1_btn_iconed) { $args['icon'] = $s1_btn_icon; }
                         // GET BUTTON
                         get_template_part('template-parts/components/component-button', null, $args);
                         ?>
