@@ -1,0 +1,48 @@
+.offer-slider{
+  &__slide{
+    color: #333;
+    text-decoration: none;
+  }
+  &__item{
+    padding: 2rem;
+    background: $color-brownish;
+    color: #333;
+    margin: 2rem 0;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+    user-select: none;
+    &--title{
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    &--excerpt{
+      margin-bottom: 1rem;
+    }
+    &--link{
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-decoration: underline;
+    }
+    &:hover{
+      background: #333;
+      color: white;
+      box-shadow: 0 7px 15px rgba(0,0,0,.2);
+    }
+  }
+  &__bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: -1;
+    & img{
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+}

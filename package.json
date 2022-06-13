@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "terser-webpack-plugin": "^5.3.3",
     "ts-loader": "^9.2.8",
     "tsconfig-paths-webpack-plugin": "^3.5.2",
     "typescript": "^4.6.3",
@@ -21,7 +22,10 @@
     "webpack-dev-server": "^4.8.1"
   },
   "dependencies": {
+    "css-loader": "^6.7.1",
     "npm-run-all": "^4.1.5",
-    "sass": "^1.50.1"
+    "sass": "^1.50.1",
+    "style-loader": "^3.3.1",
+    "swiper": "^8.2.3"
   }
 }

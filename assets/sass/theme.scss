@@ -13,6 +13,7 @@
 @import "sub/mega-menu";
 @import "sub/specialists";
 @import "sub/contact";
+@import "sub/offer-slider";
 
 $letter-spacing: 3px;
 
@@ -367,6 +368,11 @@ main{
     left: 0;
     z-index: 10;
     transform: rotate(180deg);
+    &.not-absolute{
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
   }
 }
 .spinner{
