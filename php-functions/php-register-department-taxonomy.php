@@ -4,6 +4,7 @@ function taxonomy_department() {
     register_taxonomy('department', 'doctors', array(
         // Hierarchical taxonomy (like categories)
         'hierarchical' => false,
+        'show_admin_column' => true,
         // 'show_ui' => true,
         // 'show_in_quick_edit' => false,
         // 'meta_box_cb' => false,
