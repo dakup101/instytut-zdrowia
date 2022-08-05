@@ -3,8 +3,9 @@
 add_action('init', 'specialists_ajax_init');
 
 function specialists_ajax_init(){
-  add_action( 'wp_ajax_nopriv_specialists', 'specialists_ajax' );
   add_action( 'wp_ajax_specialistsajax', 'specialists_ajax' );
+  add_action( 'wp_ajax_nopriv_specialistsajax', 'specialists_ajax' );
+
 }
 
 function specialists_ajax(){

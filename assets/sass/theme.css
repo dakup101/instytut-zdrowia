@@ -223,6 +223,9 @@
 .prices__table-btn.active svg {
   transform: rotate(270deg);
 }
+.prices__table-btn:hover, .prices__table-btn.active {
+  color: #BA933C;
+}
 .prices__table-item {
   border: 1px solid transparent;
   box-sizing: border-box;

@@ -7,7 +7,7 @@ function taxonomy_department() {
         'show_admin_column' => true,
         // 'show_ui' => true,
         // 'show_in_quick_edit' => false,
-        // 'meta_box_cb' => false,
+        'meta_box_cb' => false,
         // This array of options controls the labels displayed in the WordPress Admin UI
         'labels' => array(
         'name' => _x( 'Poradnie', 'taxonomy general name' ),
