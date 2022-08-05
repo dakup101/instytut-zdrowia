@@ -18,34 +18,25 @@ function post_type_offers() {
         );
          
     // Set other options for Custom Post Type
-        $rewrite = array(
-            'slug'                => 'oferta',
-            'with_front'          => 'true',
-            'pages'               => false,
-            'feeds'               => true
-        );
-
         $args = array(
-            'label'               => __( 'offers', 'instytut-zdrowia' ),
-            'description'         => __( 'Oferty instytuta zdrowia', 'instytut-zdrowia' ),
-            'labels'              => $labels,
-            'supports'            => array( 'title', 'revisions', 'custom-fields', ),
-            'hierarchical'        => true,
-            'public'              => true,
-            'show_ui'             => true,
-            'show_in_menu'        => true,
-            'show_in_nav_menus'   => false,
-            'show_in_admin_bar'   => false,
-            'menu_position'       => 5,
-            'can_export'          => true,
-            'exclude_from_search' => true,
-            'publicly_queryable'  => false,
-            'show_in_rest'        => true,
+            'label'                 => __( 'Oferta', 'instytut-zdrowia' ),
+            'description'           => __( 'Oferta Instytutu Zdrowia', 'instytut-zdrowia' ),
+            'labels'                => $labels,
+            'supports'              => array( 'title', 'thumbnail', 'revisions', 'custom-fields'),
+            'taxonomies'            => array( 'offer-categories'),
+            'hierarchical'          => false,
+            'public'                => true,
+            'show_ui'               => true,
+            'show_in_menu'          => true,
+            'menu_position'         => 5,
+            'show_in_admin_bar'     => true,
+            'show_in_nav_menus'     => true,
+            'can_export'            => true,
+            'has_archive'           => 'oferta',
+            'exclude_from_search'   => false,
+            'publicly_queryable'    => true,
+            'capability_type'       => 'page',
             'menu_icon'           => 'dashicons-plus-alt',
-            'has-archive'         => true,
-            'rewrite'             => $rewrite,
-            'taxonomies'          => array( 'offer_category'),
-            'capability_type'     => 'page',
         );
          
         // Registering your Custom Post Type
@@ -59,3 +50,4 @@ function post_type_offers() {
     */
      
     add_action( 'init', 'post_type_offers', 0 );
+    
