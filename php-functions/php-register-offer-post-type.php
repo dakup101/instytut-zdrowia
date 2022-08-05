@@ -18,13 +18,19 @@ function post_type_offers() {
         );
          
     // Set other options for Custom Post Type
-         
+        $rewrite = array(
+            'slug'                => 'oferta',
+            'with_front'          => 'true',
+            'pages'               => false,
+            'feeds'               => true
+        );
+
         $args = array(
             'label'               => __( 'offers', 'instytut-zdrowia' ),
             'description'         => __( 'Oferty instytuta zdrowia', 'instytut-zdrowia' ),
             'labels'              => $labels,
             'supports'            => array( 'title', 'revisions', 'custom-fields', ),
-            'hierarchical'        => false,
+            'hierarchical'        => true,
             'public'              => true,
             'show_ui'             => true,
             'show_in_menu'        => true,
@@ -36,9 +42,10 @@ function post_type_offers() {
             'publicly_queryable'  => false,
             'show_in_rest'        => true,
             'menu_icon'           => 'dashicons-plus-alt',
-             
-            // This is where we add taxonomies to our CPT
+            'has-archive'         => true,
+            'rewrite'             => $rewrite,
             'taxonomies'          => array( 'offer_category'),
+            'capability_type'     => 'page',
         );
          
         // Registering your Custom Post Type
