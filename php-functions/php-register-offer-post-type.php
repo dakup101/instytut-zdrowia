@@ -53,17 +53,13 @@ function post_type_offers() {
      
     }
      
-    /* Hook into the 'init' action so that the function
-    * Containing our post type registration is not 
-    * unnecessarily executed. 
-    */
+/* Hook into the 'init' action so that the function
+* Containing our post type registration is not 
+* unnecessarily executed. 
+*/
      
-    add_action( 'init', 'post_type_offers', 0 );
+add_action( 'init', 'post_type_offers', 0 );
     
-
-    /**
- * Adds a custom field: "offers page"; on the "Settings > Reading" page.
- */
 add_action( 'admin_init', function () {
     $id = 'page_for_offers';
     // add_settings_field( $id, $title, $callback, $page, $section = 'default', $args = array() )
@@ -73,12 +69,7 @@ add_action( 'admin_init', function () {
     ) );
 } );
 
-/**
- * Renders the custom "offers page" field.
- *
- * @param array $args
- */
-function settings_field_page_for_offers( $args ) {
+function settings_field_page_for_offers() {
     $id = 'page_for_offers';
     wp_dropdown_pages( array(
         'name'              => $id,
@@ -88,25 +79,12 @@ function settings_field_page_for_offers( $args ) {
     ) );
 }
 
-/**
- * Adds page_for_offers to the white-listed options, which are automatically
- * updated by WordPress.
- *
- * @param array $options
- */
 add_filter( 'whitelist_options', function ( $options ) {
     $options['reading'][] = 'page_for_offers';
 
     return $options;
 } );
 
-/**
- * Filters the post states on the "Pages" edit page. Displays "offers Page"
- * after the post/page title, if the current page is the offers static page.
- *
- * @param array $states
- * @param WP_Post $post
- */
 add_filter( 'display_post_states', function ( $states, $post ) {
     if ( intval( get_option( 'page_for_offers' ) ) === $post->ID ) {
         $states['page_for_offers'] = __( 'Strona Oferty' );
