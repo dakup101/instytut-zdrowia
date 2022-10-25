@@ -7,32 +7,33 @@ $icons = $content['icons'];
 ?>
 
 <section class="container-fluid icons-row pt-5">
-	<div class="iz-container">
-		<div class="text-center mb-5">
-			<?php get_template_part('template-parts/components/component-title-subtitle', null, $title_subtitle); ?>
+    <div class="iz-container">
+        <div class="text-center mb-5">
+            <?php get_template_part('template-parts/components/component-title-subtitle', null, $title_subtitle); ?>
         </div>
         <div class="row py-5">
             <div class="<?php echo $offset ? 'col-10 offset-1' : 'col-12'; ?>">
                 <div class="row gx-5">
-		            <?php foreach ($icons as $icon) : ?>
-                        <div class="col-12 col-md">
-                            <div class="icons-row__column">
-                                <div class="icons-row__icon">
-                                    <img src="<?php echo $icon['icon'] ?>" alt="Instytut Zdrowia">
-                                </div>
-                                <div class="icons-row__text text text-center">
-						            <?php echo $icon['text']; ?>
-                                </div>
+                    <?php foreach ($icons as $icon) : ?>
+                    <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                        <div class="icons-row__column">
+                            <div class="icons-row__icon">
+                                <img src="<?php echo $icon['icon'] ?>" alt="Instytut Zdrowia">
+                            </div>
+                            <div class="icons-row__text text text-center">
+                                <?php echo $icon['text']; ?>
                             </div>
                         </div>
-		            <?php endforeach; ?>
+                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
-	</div>
+    </div>
     <?php if ($offset) : ?>
-        <div class="icons-row__lower-img">
-            <img src="<?php echo get_template_directory_uri().'/assets/images/svg/half-horizontal.svg'?>" alt="Instytut Zdrowia - Logo-połówka">
-        </div>
+    <div class="icons-row__lower-img">
+        <img src="<?php echo get_template_directory_uri().'/assets/images/svg/half-horizontal.svg'?>"
+            alt="Instytut Zdrowia - Logo-połówka">
+    </div>
     <?php endif; ?>
 </section>

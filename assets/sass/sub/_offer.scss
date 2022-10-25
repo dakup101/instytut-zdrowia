@@ -1,0 +1,66 @@
+.offer-loop{
+    &__title{
+        margin-bottom: 40px;
+        margin-top: 20px;
+        font-weight: 600;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: $color-accent;
+            left: 0;
+            bottom: -6px;
+        }
+    }
+}
+.single-offer{
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+    width: 100%;
+    background: $color-accent;
+    display: block;
+    margin-bottom: 20px;
+    &__bg{
+        position: absolute;
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        & img{
+            display: block;
+            object-fit: cover;
+            min-width: 100%;
+            min-height: 100%;
+            transition: $transition;
+        }
+    }
+    &__title{
+        color: $color-light;
+        font-size: 24px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        font-weight: bold;
+        background: rgba($color: #000000, $alpha: .3);
+        transition: $transition;
+    }
+    &:hover &__bg{
+        & img{
+            transform: scale(1.1);
+        }
+    }
+    &:hover &__title{
+        background: rgba($color: $color-accent, $alpha: .8);
+    }
+}

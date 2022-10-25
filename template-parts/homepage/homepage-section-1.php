@@ -16,13 +16,14 @@ if ($s1_btn_iconed) { $s1_btn_icon = $s1['ikonka_przycisku']; }
 <section class="container-fluid mb-5" id="hero">
     <div class="iz-container">
         <div class="row">
-            <div class="col col-12 col-md-7 pe-md-0" >
+            <div class="col col-12 col-xl-7 h-50 h-xl-100 pe-xl-0 mb-5 mb-lg-0 order-2 order-xl-1 mt-5 mt-xl-0">
                 <div class="image-wrapper column-image h-100" style="background-image: url('<?php echo $s1_img; ?>')">
                     <img src="<?php echo $s1_img; ?>" alt="">
                 </div>
             </div>
-            <div class="col col-12 col-md-5 half-column" style="background-image: url('<?php echo get_template_directory_uri().'/assets/images/svg/half.svg'?>')">
-                <div class="wrapper ps-md-5 h-100 d-flex flex-column justify-content-center">
+            <div class="col col-12 col-xl-5 h-xl-100 half-column order-1 order-xl-2"
+                style="background-image: url('<?php echo get_template_directory_uri().'/assets/images/svg/half.svg'?>')">
+                <div class="wrapper ps-xl-5 h-xl-100 d-flex flex-column justify-content-center">
                     <?php
                     // TITLE ARGS
                     $args = array(
@@ -62,7 +63,17 @@ if ($s1_btn_iconed) { $s1_btn_icon = $s1['ikonka_przycisku']; }
                             <span class="number">01</span>
                             Instytut Zdrowia
                         </span>
-                        <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 254.27 109.43"><defs><style>.b{fill:currentColor;}</style></defs><polygon class="b" points="186.22 109.43 254.27 54.72 186.22 0 186.22 30.81 0 30.81 0 78.62 186.22 78.62 186.22 109.43"/></svg>
+                        <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 254.27 109.43">
+                            <defs>
+                                <style>
+                                .b {
+                                    fill: currentColor;
+                                }
+                                </style>
+                            </defs>
+                            <polygon class="b"
+                                points="186.22 109.43 254.27 54.72 186.22 0 186.22 30.81 0 30.81 0 78.62 186.22 78.62 186.22 109.43" />
+                        </svg>
                     </a>
                 </div>
             </div>

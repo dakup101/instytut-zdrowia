@@ -10,21 +10,21 @@ $link = $s2['link']['link'];
 $link_text = $s2['link']['text'];
 ?>
 <section class="container-fluid mb-5" id="oNas">
-	<div class="iz-container">
-		<div class="row align-items-center">
-            <div class="col-4 section-2-imgs">
+    <div class="iz-container">
+        <div class="row align-items-center">
+            <div class="col-7 col-xl-4 section-2-imgs order-2 order-lg-1">
                 <div class="col-img-wrapper mt-5">
                     <img src="<?php echo $img_1; ?>" alt="" class="col-img-wrapper__item">
                 </div>
             </div>
-            <div class="col-3 pe-md-0 section-2-imgs">
+            <div class="col-5 col-xl-3 pe-md-0 section-2-imgs order-3 order-lg-2">
                 <div class="col-img-wrapper mb-5">
                     <img src="<?php echo $img_2; ?>" alt="" class="col-img-wrapper__item">
                 </div>
             </div>
-			<div class="col-12 col-md-6 col-lg-4 offset-1">
+            <div class="col-12 col-xl-4 offset-0 offset-xl-1 mb-5 mb-lg-0 order-1 order-lg-3">
                 <div class="section-2-content">
-                    <div class="wrapper ps-md-5 ps-xxl-0">
+                    <div class="wrapper ps-0 ps-xl-5 ps-xxl-0">
                         <?php
                         // TITLE ARGS
                         $args = array(
@@ -64,7 +64,7 @@ $link_text = $s2['link']['text'];
                         </div>
                     </div>
                 </div>
-			</div>
-		</div>
-	</div>
+            </div>
+        </div>
+    </div>
 </section>

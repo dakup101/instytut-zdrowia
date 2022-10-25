@@ -17,7 +17,7 @@ $text_4 = $s2['text_4'];
 <section class="container-fluid mb-5 mt-5" id="oNas">
     <div class="iz-container">
         <div class="row gx-5 align-items-end">
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-xl-8">
 
                 <?php
                 $args = array(
@@ -28,31 +28,33 @@ $text_4 = $s2['text_4'];
                 // GET TITLE
                 get_template_part('template-parts/components/component-title-subtitle', null, $args);
                 ?>
-                <div class="row mx-0 gx-5">
-                    <div class="col-12 col-md-6 ps-md-0">
+                <div class="row mx-0 gx-xl-5">
+                    <div class="col-12 col-md-6  pe-xl-3">
                         <div class="text">
                             <?php echo $text ?>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 pe-md-0">
+                    <div class="col-12 col-md-6  ps-xl-3">
                         <div class="text">
                             <?php echo $text_2 ?>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4">
-                <img src="<?php echo $img_1 ?>" alt="">
+            <div class="col-12 col-xl-4">
+                <img src="<?php echo $img_1 ?>" alt="" class="w-100 w-lg-auto">
             </div>
         </div>
         <div class="row align-items-start gx-md-5 mt-5">
-            <div class="col-12 col-md-4 text-center">
+            <div class="col-12 col-md-4 text-center order-2 order-xl-1">
                 <div class="img-with-logo">
-                    <img src="<?php echo $img_2; ?>" alt="">
-                    <img class="img-with-logo__down not-absolute" src="<?php echo get_template_directory_uri().'/assets/images/svg/half-horizontal.svg'; ?>" alt="">
+                    <img src="<?php echo $img_2; ?>" alt="" class="w-100 w-lg-auto">
+                    <img class="img-with-logo__down not-absolute w-100 w-lg-auto"
+                        src="<?php echo get_template_directory_uri().'/assets/images/svg/half-horizontal.svg'; ?>"
+                        alt="">
                 </div>
             </div>
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-md-8 order-1 order-xl-2">
                 <img class="w-100 mb-5" src="<?php echo $img_3 ?>" alt="">
                 <?php
                 $args = array(
@@ -69,7 +71,7 @@ $text_4 = $s2['text_4'];
             </div>
         </div>
         <div class="row align-items-center mt-5 gx-5">
-            <div class="col-12 col-md-6 ps-md-5 col-lg-6">
+            <div class="col-12 col-xl-6 ps-xl-5 mb-5 mb-xl-0">
                 <div class="section-2-content">
                     <div class="wrapper ps-md-5 ps-xxl-0">
                         <?php
@@ -91,12 +93,12 @@ $text_4 = $s2['text_4'];
                     </div>
                 </div>
             </div>
-            <div class="col-3 section-2-imgs">
+            <div class="col-6 col-xl-3 section-2-imgs">
                 <div class="col-img-wrapper mt-5">
                     <img src="<?php echo $img_4; ?>" alt="" class="col-img-wrapper__item">
                 </div>
             </div>
-            <div class="col-3 pe-md-0 section-2-imgs">
+            <div class="col-6 col-xl-3 pe-md-0 section-2-imgs">
                 <div class="col-img-wrapper mb-5">
                     <img src="<?php echo $img_5; ?>" alt="" class="col-img-wrapper__item">
                 </div>

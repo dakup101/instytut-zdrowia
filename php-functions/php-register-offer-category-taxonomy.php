@@ -3,7 +3,7 @@ function taxonomy_offer_category() {
     // Add new "Locations" taxonomy to Posts
     register_taxonomy('offer_category', 'offers', array(
         // Hierarchical taxonomy (like categories)
-        'hierarchical' => false,
+        'hierarchical' => true,
         'show_admin_column' => true,
         // 'show_ui'                    => true,
         // 'show_in_quick_edit'         => false,

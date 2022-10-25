@@ -4,9 +4,11 @@ $locations = get_nav_menu_locations();
 $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
 $menu_items = wp_get_nav_menu_items( $menu->term_id, array( 'order' => 'DESC' ) );
 $counter = 0;
+
+
 ?>
 
-<nav class="main-nav__nav d-none d-xl-flex justify-content-end align-items-center">
+<nav class="main-nav__nav d-flex flex-column d-xl-none align-items-center mobile">
     <?php foreach ($menu_items as $item) : ?>
     <?php if ($item->menu_item_parent == 0) : ?>
     <a href="<?php echo $item->url; ?>"
@@ -16,7 +18,7 @@ $counter = 0;
             class="main-nav__link--text"><?php echo $item->title; ?><?php if (menu_item_has_children($menu_items, $item->db_id)) {echo '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>';} ?></span>
     </a>
     <?php if (isset($menu_items[($counter+1)]) && $menu_items[($counter+1)]->menu_item_parent == $item->db_id) : ?>
-    <div class="mega-menu" data-parent="<?php echo $item->db_id; ?>">
+    <div class="mega-menu mobile" data-parent="<?php echo $item->db_id; ?>">
         <div class="mega-menu__wrapper">
             <div class="mega-menu__wrapper--left">
                 <?php foreach (get_menu_item_children($menu_items, $item->db_id) as $sub_item) : ?>
