@@ -61,14 +61,19 @@
             </div>
         </div>
         <div class="main-nav container-fluid">
-            <div
-                class="iz-container main-nav__wrapper  d-flex flex-column flex-xl-row justify-content-between align-items-center">
+            <div class="iz-container main-nav__wrapper d-flex flex-row justify-content-between align-items-center">
                 <a href="<?php echo get_home_url(); ?>" class="main-nav__logo" id="logo">
                     <img src="<?php echo get_template_directory_uri().'/assets/images/logo-header.png'; ?>"
                         alt="Instytut Zdrowia">
                 </a>
+                <button class="open-mobile-nav d-block d-xl-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </button>
                 <?php get_template_part('template-parts/header-nav'); ?>
-                <?php // get_template_part('template-parts/header-nav-mobile'); ?>
+                <?php get_template_part('template-parts/header-nav-mobile'); ?>
             </div>
         </div>
     </header>

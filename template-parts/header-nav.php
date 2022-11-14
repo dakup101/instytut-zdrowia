@@ -44,14 +44,14 @@ $counter = 0;
                 <?php endforeach; ?>
             </div>
             <div class="mega-menu__wrapper--right">
-                gawno jebanoje
+
             </div>
         </div>
     </div>
     <?php endif; ?>
     <?php endif; ?>
     <?php $counter ++; endforeach; ?>
-    <a href="#" class="iz-btn iz-btn__main ms-2">
+    <a href="/zarezerwuj-termin" class="iz-btn iz-btn__main ms-2">
         <img class="iz-btn__icon"
             src="<?php echo get_template_directory_uri().'/assets/images/svg/calendar-white.svg';?>" alt="">
         <span class="iz-btn__text">

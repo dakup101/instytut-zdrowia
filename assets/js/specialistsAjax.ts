@@ -18,7 +18,9 @@ export default function specialistsAjax(doctor_id) {
 	})
 		.then((response) => response.json())
 		.then((json) => {
-			let name: string = json.title + " " + json.name;
+			let title: string = json.title;
+			let name: string = json.name;
+			if (title) name = title + name;
 			let desc: string = json.desc;
 			let img: string = json.img;
 

@@ -3,11 +3,16 @@ $data = get_field('sekcja_1');
 $title = $data['title'];
 $text = $data['text'];
 $img = $data['img'];
+$btn_txt = $data['btn_text'];
+$btn_link = $data['btn_link'];
+$btn_global = get_field('offer_btn_1', 'options');
+$btn_link_global = get_field('offer_link_1', 'options');
 ?>
+<?php if ($title) : ?>
 <section class="container-fluid mb-5">
-    <div class="iz-container">
-        <div class="row align-items-center gx-md-5">
-            <div class="col-12 col-md-5">
+    <div class="iz-container offer">
+        <div class="row">
+            <div class="col-12 col-md-5 gx-md-3">
                 <?php
                 // TITLE ARGS
                 $args = array(
@@ -21,14 +26,20 @@ $img = $data['img'];
                 <div class="text">
                     <?php echo $text ?>
                 </div>
-                <a href="#" class="footer__contact-btn mt-5" data-contact-modal>
-                    <img src="<?php echo get_home_url().'/wp-content/uploads/2022/04/calendar.svg'?>" alt="" class="footer__contact-btn--img">
-                    <span class="footer__contact-btn--text">Zarezerwuj termin</span>
+                <a href="<?php echo !empty($btn_txt) ? $btn_link : $btn_link_global ?>" class="footer__contact-btn mt-5"
+                    data-contact-modal>
+                    <!-- <img src="<?php echo get_home_url().'/wp-content/uploads/2022/04/calendar.svg'?>" alt=""
+                        class="footer__contact-btn--img"> -->
+                    <span
+                        class="footer__contact-btn--text"><?php echo !empty($btn_txt) ? $btn_txt : $btn_global ?></span>
                 </a>
             </div>
             <div class="col-12 offset-md-1 col-md-6">
-                <img src="<?php echo $img ?>" alt="">
+                <figure class="offer-figure h-100">
+                    <img src="<?php echo $img ?>" alt="">
+                </figure>
             </div>
         </div>
     </div>
 </section>
+<?php endif; ?>

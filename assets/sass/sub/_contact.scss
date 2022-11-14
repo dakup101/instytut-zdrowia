@@ -48,7 +48,7 @@
             background: rgba($color: #fff, $alpha: .5);
         }
         & input::placeholder, & textarea::placeholder{
-            color: #d5d5d5;
+            color: gray;
         }
     }
     & input[type="submit"]{

@@ -12,7 +12,7 @@ $img = $data['img'];
                 <div class="text">
                     <?php echo $text; ?>
                 </div>
-                <a href="#" class="footer__contact-btn mt-5" data-contact-modal>
+                <a href="/zarezerwuj-termin" class="footer__contact-btn mt-5" data-contact-modal>
                     <img src="<?php echo get_home_url().'/wp-content/uploads/2022/04/calendar.svg'?>" alt=""
                         class="footer__contact-btn--img">
                     <span class="footer__contact-btn--text">Zarezerwuj termin</span>

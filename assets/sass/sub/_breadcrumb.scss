@@ -23,6 +23,9 @@
     padding-left: .8rem;
     position: relative;
     transition: $transition;
+    @media(max-width: 991px){
+      font-size: 10px;
+    }
     &:before{
       content: '';
       height: 1em;
@@ -43,4 +46,5 @@
       color: $color-accent;
     }
   }
+
 }

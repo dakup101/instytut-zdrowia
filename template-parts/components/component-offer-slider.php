@@ -2,7 +2,7 @@
 $args = array(
     'post_type' => 'offers',//it is a Page right?
     'post_status' => 'publish',
-    'posts_per_page' => 2,
+    'posts_per_page' => 10,
     'orderby' => 'rand',
     // 'meta_query' => array(
     //     array(
