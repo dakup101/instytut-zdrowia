@@ -35,6 +35,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	mobileNavHandle();
 	lvl3MobileNavHandle();
 	mobilNavTriggers();
+	searchHandle();
 	let specialistMoreBtn = document.querySelectorAll(".specialists__link--more");
 	for (let btn of specialistMoreBtn) {
 		btn.addEventListener("click", (e) => {
@@ -114,5 +115,23 @@ function mobilNavTriggers() {
 		ev.preventDefault();
 		console.log("b");
 		mobileNav.classList.toggle("show");
+	});
+}
+
+function searchHandle() {
+	let searchWraps = document.querySelectorAll(".iz-search");
+	Array.from(searchWraps).forEach((wrap) => {
+		let btn = wrap.querySelector(".iz-search__btn");
+		let bar = wrap.querySelector(".iz-search__form");
+		btn.addEventListener("click", (ev) => {
+			ev.preventDefault();
+			btn.classList.toggle("active");
+			if (!btn.classList.contains("active")) {
+				bar.classList.remove("show");
+				return;
+			}
+			bar.classList.add("show");
+			(bar.querySelector('input[type="text"]') as HTMLInputElement).focus();
+		});
 	});
 }
