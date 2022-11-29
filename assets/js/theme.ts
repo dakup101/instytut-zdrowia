@@ -107,6 +107,7 @@ function mobilNavTriggers() {
 		ev.preventDefault();
 		console.log("a");
 		mobileNav.classList.toggle("show");
+		document.querySelector(".site-overlay").classList.toggle("show");
 	});
 
 	let closeBtn = document.querySelector(".close-mobile-nav");
@@ -115,6 +116,7 @@ function mobilNavTriggers() {
 		ev.preventDefault();
 		console.log("b");
 		mobileNav.classList.toggle("show");
+		document.querySelector(".site-overlay").classList.toggle("show");
 	});
 }
 

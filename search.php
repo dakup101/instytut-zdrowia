@@ -11,7 +11,7 @@ if ($the_query->have_posts()):
 ?>
     <div class="title-subtitle mb-5">
         <h1 class="title-subtitle__title fw-light">
-            Wyniki wyszukania dla: <?php echo get_query_var('s') ?>
+            Szukasz: <?php echo get_query_var('s') ?>
         </h1>
     </div>
     <div class="row">

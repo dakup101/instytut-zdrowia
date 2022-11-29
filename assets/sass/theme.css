@@ -1017,6 +1017,7 @@ main {
   writing-mode: lr;
   font-size: 5rem;
   right: -2rem;
+  display: none;
 }
 @media (max-width: 1200px) {
   .half-column .link-to-right {
@@ -1468,6 +1469,12 @@ header {
   z-index: 500;
   border-bottom: 1px solid #f2f2f2;
   padding-bottom: 10px;
+}
+
+@media (max-width: 1240px) {
+  #logo img {
+    height: 60px;
+  }
 }
 
 /*# sourceMappingURL=theme.css.map */
