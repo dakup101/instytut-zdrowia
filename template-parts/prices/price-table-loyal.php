@@ -40,7 +40,7 @@ $table = $prices['tabela'];
                             <?php foreach ($item['items'] as $row)  : ?>
                             <div class="prices__table-item--row">
                                 <span class="prices__table-item--service"><?php echo $row['text']; ?></span>
-                                <span class="prices__table-item--price"><?php echo $row['price']; ?> zł</span>
+                                <span class="prices__table-item--price"><?php echo $row['price']; ?></span>
                             </div>
                             <?php endforeach; ?>
                         </div>

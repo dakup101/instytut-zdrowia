@@ -44,6 +44,11 @@ window.addEventListener("DOMContentLoaded", () => {
 			specialistsAjax(doctor_id);
 		});
 	}
+
+	let searchWraps = document.querySelectorAll(".iz-search");
+	Array.from(searchWraps).forEach((el) => {
+		(el.querySelector('input[type="text"]') as HTMLInputElement).value = "";
+	});
 });
 
 function mobileNavHandle() {

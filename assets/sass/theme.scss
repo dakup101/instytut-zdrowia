@@ -291,7 +291,7 @@ main{
     }
   }
   &__lower-img{
-    margin-bottom: -50px;
+    margin-bottom: -25px;
     text-align: center;
   }
 }
@@ -578,5 +578,23 @@ header{
 @media(max-width: 1240px){
   #logo img{
     height: 60px;
+  }
+}
+
+.contact-aside{
+  background: #f8f9fa;
+  padding: 0 15px;
+  padding-top: 25px;
+  margin-bottom: 35px;
+  &__lower-img{
+    width: 60%;
+    margin: 0 auto;
+    & img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  & .contact-people__item--content{
+    margin: 0 auto;
   }
 }

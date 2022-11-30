@@ -2,6 +2,26 @@
     &__item{
         display: flex;
         gap: 2.5rem;
+        justify-content: center;
+        &__content{
+            width: 100%;
+        }
+        &--img-wrapper{
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border: 5px solid #c4a57a;
+            border-radius: 100px;
+            overflow: hidden;
+            margin: 0 auto;
+            margin-bottom: 15px;
+            & img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+            }
+        }
         &--phone{
             color: $color-dark;
             text-decoration: none;
@@ -27,6 +47,13 @@
         display: block;
         width: 100%;
         height: 100%;
+        
+    }
+    &__map iframe{
+        @media(max-width: 991px){
+            height: 500px;
+            margin: 25px 0;
+        }
     }
     & .text{
         font-size: 1.3rem;
