@@ -14,27 +14,6 @@ require_once(get_template_directory().'/php-functions/php-register-med_title-tax
 require_once(get_template_directory().'/php-functions/php-register-department-taxonomy.php');
 require_once(get_template_directory().'/php-functions/php-specialists-ajax.php');
 
-
-// Taxonomies by custom order
-
-function set_the_terms_in_order ( $terms, $id, $taxonomy ) {
-    $terms = wp_cache_get( $id, "{$taxonomy}_relationships_sorted" );
-    if ( false === $terms ) {
-        $terms = wp_get_object_terms( $id, $taxonomy, array( 'orderby' => 'term_order' ) );
-        wp_cache_add($id, $terms, $taxonomy . '_relationships_sorted');
-    }
-    return $terms;
-}
-add_filter( 'get_the_terms', 'set_the_terms_in_order' , 10, 4 );
-
-function do_the_terms_in_order () {
-    global $wp_taxonomies;  //fixed missing semicolon
-    // the following relates to tags, but you can add more lines like this for any taxonomy
-    $wp_taxonomies['offer_category']->sort = true;
-    $wp_taxonomies['offer_category']->args = array( 'orderby' => 'term_order' );    
-}
-add_action( 'init', 'do_the_terms_in_order');
-
 function get_menu_item_children($menu_items, $parent_id){
     $children = array();
     foreach ($menu_items as $item){
@@ -80,3 +59,15 @@ function wp_get_menu_array($current_menu): array {
 		'submenus' => $submenu
 	);
 }
+
+function wpa_course_post_link( $post_link, $id = 0 ){
+    $post = get_post($id);  
+    if ( is_object( $post ) ){
+        $terms = wp_get_object_terms( $post->ID, 'offer_category' );
+        if( $terms ){
+            return str_replace( '%offer_category%' , $terms[0]->slug , $post_link );
+        }
+    }
+    return $post_link;  
+}
+add_filter( 'post_type_link', 'wpa_course_post_link', 1, 3 );

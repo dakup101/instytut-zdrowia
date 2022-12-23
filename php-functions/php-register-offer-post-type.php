@@ -20,10 +20,11 @@ function post_type_offers() {
     // Set other options for Custom Post Type
         
         $rewrite = array(
-            'slug'                  => 'oferta',
-            'with_front'            => true,
+            'slug'                  => 'oferta/%offer_category%',
+            'with_front'            => false,
             'pages'                 => false,
             'feeds'                 => true,
+            'hierarchical'               => true,
         );
         
         $args = array(
@@ -40,11 +41,11 @@ function post_type_offers() {
             'show_in_admin_bar'     => true,
             'show_in_nav_menus'     => true,
             'can_export'            => true,
-            'has_archive'           => false,
+            'has_archive'           => true,
             'rewrite'               => $rewrite,
             'exclude_from_search'   => false,
             'publicly_queryable'    => true,
-            'capability_type'       => 'page',
+            'capability_type'       => 'post',
             'menu_icon'           => 'dashicons-plus-alt',
         );
          

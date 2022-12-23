@@ -38,6 +38,11 @@ $text_4 = $s2['text_4'];
                         <div class="text">
                             <?php echo $text_2 ?>
                         </div>
+                        <a href="/oferta/" class="footer__contact-btn mt-3" data-contact-modal>
+                            <span class="footer__contact-btn--text">
+                                Zapoznaj się z ofertą
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -88,8 +93,13 @@ $text_4 = $s2['text_4'];
                         <?php
                         ?>
                         <div class="text">
-                            <?php echo $text_4?>
+                            <?php echo $text_4 ?>
                         </div>
+                        <a href="/zarezerwuj-termin/" class="footer__contact-btn mt-3" data-contact-modal>
+                            <span class="footer__contact-btn--text">
+                                Umów się na wiztyę
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>

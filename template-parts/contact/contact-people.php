@@ -19,16 +19,20 @@ $people = $people_field['person'];
                         <div class="contact-people__item mb-4 text-center">
                             <div class="contact-people__item--content">
                                 <p class="mb-3 fw-bold"><?php echo $info ?></p>
+                                <?php if (!empty($tels)) : ?>
                                 <p class="fw-bold mb-1">Telefon:</p>
                                 <?php foreach($tels as $tel) : ?>
                                 <a class="d-block contact-people__item--phone"
                                     href="tel:<?php echo $tel['tel'] ?>"><?php echo $tel['tel'] ?></a>
                                 <?php endforeach; ?>
+                                <?php endif;?>
+                                <?php if (!empty($email)) : ?>
                                 <p class="mb-1 mt-2 fw-bold">E-mail:</p>
                                 <?php foreach($email as $el) : ?>
                                 <a href="mailto:<?php echo $el['mail'] ?>"
                                     class="d-block contact-people__item--mail"><?php echo $el['mail'] ?></a>
                                 <?php endforeach; ?>
+                                <?php endif; ?>
 
                             </div>
                         </div>

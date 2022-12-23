@@ -292,6 +292,7 @@
   letter-spacing: 2px;
   font-weight: bold;
   margin-bottom: 2rem;
+  text-align: left;
 }
 .prices__table-btn svg {
   width: 1em;
@@ -708,7 +709,6 @@
   width: 150px;
   height: 150px;
   border: 5px solid #c4a57a;
-  border-radius: 100px;
   overflow: hidden;
   margin: 0 auto;
   margin-bottom: 15px;
@@ -1518,6 +1518,37 @@ header {
 }
 .contact-aside .contact-people__item--content {
   margin: 0 auto;
+}
+
+.contact-fixed {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #c4a57a;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+.contact-fixed svg {
+  fill: currentColor;
+  width: 25px;
+  height: 25px;
+  transition: all 0.2s ease-in-out;
+}
+.contact-fixed:hover {
+  background: #dbb359;
+  transition: all 0.2s ease-in-out;
+}
+@media (max-width: 991px) {
+  .contact-fixed {
+    bottom: 10px;
+    right: 10px;
+  }
 }
 
 /*# sourceMappingURL=theme.css.map */

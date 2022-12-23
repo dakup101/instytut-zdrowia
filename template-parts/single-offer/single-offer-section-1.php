@@ -28,8 +28,6 @@ $btn_link_global = get_field('offer_link_1', 'options');
                 </div>
                 <a href="<?php echo !empty($btn_txt) ? $btn_link : $btn_link_global ?>" class="footer__contact-btn mt-5"
                     data-contact-modal>
-                    <!-- <img src="<?php echo get_home_url().'/wp-content/uploads/2022/04/calendar.svg'?>" alt=""
-                        class="footer__contact-btn--img"> -->
                     <span
                         class="footer__contact-btn--text"><?php echo !empty($btn_txt) ? $btn_txt : $btn_global ?></span>
                 </a>

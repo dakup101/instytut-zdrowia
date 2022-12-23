@@ -598,3 +598,33 @@ header{
     margin: 0 auto;
   }
 }
+
+.contact-fixed{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: $color-brownish;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  color: white;
+  & svg{
+    fill: currentColor;
+    width: 25px;
+    height: 25px;
+    transition: all .2s ease-in-out;
+
+  }
+  &:hover{
+    background: $color-accent;
+    transition: all .2s ease-in-out;
+  }
+  @media(max-width: 991px){
+    bottom: 10px;
+    right: 10px;
+  }
+}

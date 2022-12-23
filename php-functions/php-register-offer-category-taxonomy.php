@@ -25,9 +25,9 @@ function taxonomy_offer_category() {
 		'items_list_navigation'      => __( 'Items list navigation', 'iz-theme' ),
 	);
 	$rewrite = array(
-		'slug'                       => 'oferta/kategoria',
+		'slug'                       => 'kategoria-oferty',
 		'with_front'                 => true,
-		'hierarchical'               => false,
+		'hierarchical'               => true,
 	);
 	$args = array(
 		'labels'                     => $labels,

@@ -50,7 +50,7 @@
                     </div>
                     <a href="/zarezerwuj-termin" class="footer__contact-btn">
                         <img src="<?php echo $footer_contact['btn_icon'];?>" alt="" class="footer__contact-btn--img">
-                        <span class="footer__contact-btn--text">Umów się na wizytę</span>
+                        <span class="footer__contact-btn--text">umów się na wizytę</span>
                     </a>
                 </div>
             </div>

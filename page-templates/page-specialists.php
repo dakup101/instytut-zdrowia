@@ -78,7 +78,7 @@ get_template_part('template-parts/components/component-breadcrumb', null, array(
                                 <a href="#" class="specialists__link specialists__link--more"
                                     data-doctor="<?php echo $doctor->ID; ?>">Przeczytaj więcej</a>
                                 <a href="/zarezerwuj-termin" class="specialists__link specialists__link--visit"
-                                    data-doctor="<?php echo $doctor->ID; ?>">Umów się na badanie</a>
+                                    data-doctor="<?php echo $doctor->ID; ?>">umów się na wizytę</a>
                             </span>
                         </div>
                         <?php endforeach; ?>
