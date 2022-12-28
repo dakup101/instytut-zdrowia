@@ -6,7 +6,6 @@ function add_theme_scripts(){
 	wp_enqueue_style( 'theme-css', get_template_directory_uri().'/assets/sass/theme.css');
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri().'/assets/sass/bootstrap.min.css');
 	wp_enqueue_style('cookies', get_template_directory_uri().'/assets/cookies/divante.cookies.min.css');
-
 }
 
 function add_type_attribute($tag, $handle, $src) {

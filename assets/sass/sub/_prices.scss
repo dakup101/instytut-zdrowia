@@ -5,6 +5,9 @@
     color: white;
     margin-bottom: 3rem;
     background-size: cover;
+    @media(max-width: 991px){
+      padding: 1rem;
+    }
   }
   &__table{
     &-btn{
@@ -20,12 +23,14 @@
       font-weight: bold;
       margin-bottom: 2rem;
       text-align: left;
+      gap: 1em;
       & svg{
         width: 1em;
         height: 1em;
         transform: rotate(90deg);
         fill: currentColor;
         transition: $transition;
+        flex-shrink: 0;
       }
       &.active{
         & svg{

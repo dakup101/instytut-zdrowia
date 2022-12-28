@@ -17,7 +17,7 @@ $btn_link_global = get_field('offer_link_2', 'options');
                 // TITLE ARGS
                 $args = array(
                     'title'=>$title,
-                    'wrapper_title' => 'h1',
+                    'wrapper_title' => 'h2',
                     'font_weight_title' => 'normal',
                 );
                 // GET TITLE
@@ -34,9 +34,11 @@ $btn_link_global = get_field('offer_link_2', 'options');
                 </a>
             </div>
             <div class="col-12 offset-md-1 col-md-4 ">
+                <?php if ($img): ?>
                 <figure class="offer-figure h-100">
-                    <img src="<?php echo $img ?>" alt="">
+                    <img src="<?php echo $img ?>" alt="<?php echo get_the_title() ?>">
                 </figure>
+                <?php endif; ?>
             </div>
         </div>
     </div>

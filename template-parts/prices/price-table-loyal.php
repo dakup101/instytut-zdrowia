@@ -7,7 +7,7 @@ $table = $prices['tabela'];
 <section class="container-fluid">
     <div class="iz-container">
         <div class="row">
-            <div class="col-8 offset-2">
+            <div class="col-12 col-md-8 offset-md-2">
                 <div class="prices__banner" style="background-image: url('<?php echo $banner['img'] ?>')">
                     <?php
                     // SET TITLE ARGS

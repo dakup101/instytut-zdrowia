@@ -33,9 +33,11 @@ $btn_link_global = get_field('offer_link_1', 'options');
                 </a>
             </div>
             <div class="col-12 offset-md-1 col-md-6">
+                <?php if ($img): ?>
                 <figure class="offer-figure h-100">
-                    <img src="<?php echo $img ?>" alt="">
+                    <img src="<?php echo $img ?>" alt="<?php echo get_the_title() ?>">
                 </figure>
+                <?php endif; ?>
             </div>
         </div>
     </div>
